@@ -8,6 +8,25 @@ Change:
 2. Added `Null Object Pattern`.
 3. Now adding `Memento Pattern` with `Programming with Mosh`.
 
-# Definitions of each pattern
+## Definitions of each pattern
 Definition by GoF
-## Strategy Pattern
+### Abstract Factory Pattern
+### Adapter Pattern
+### Bridge Pattern
+### Command Pattern
+### Composite Pattern
+### Decorator Pattern
+### Facade Pattern
+### Factory Method Pattern
+### Iterator Pattern
+### Memento Pattern
+### Null Object Pattern
+### Observer Pattern
+### Proxy Pattern
+### Singleton Pattern
+### State Pattern
+### Strategy Pattern
+### Template Method Pattern
+
+## Who made this?
+[cliid](https://github.com/cliid), a Junior Developer who loves Java.
