@@ -1,92 +1,76 @@
-# Design Patterns
+# design patterns
 
-Implementation of design patterns with Java, mainly from Christopher Okhravi's Design Pattern videos, including some other important design patterns from other sources such as Mosh's ones.
+this repo contains implementations of various design patterns in java, mostly inspired by christopher okhravi's videos, with a few extras pulled from other sources like mosh hamedani’s work.
 
-The following are the definitions of the design patterns described in the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (often referred to as the "Gang of Four" or "GoF"):
+below are the definitions of key design patterns from "design patterns: elements of reusable object-oriented software" by erich gamma, richard helm, ralph johnson, and john vlissides (the "gang of four"):
 
-## Definitions
+## definitions
 
-### Abstract Factory Pattern
+### abstract factory pattern
+- purpose: provide a way to create related objects without specifying their exact classes.
+- roles: `AbstractFactory`, `ConcreteFactory`, `AbstractProduct`, `ConcreteProduct`.
 
-- Intent: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
-- Key Participants: AbstractFactory, ConcreteFactory, AbstractProduct, ConcreteProduct.
+### adapter pattern
+- purpose: let incompatible interfaces work together by converting one interface into another that clients expect.
+- roles: `Target`, `Adapter`, `Adaptee`.
 
-### Adapter Pattern
+### bridge pattern
+- purpose: separate an abstraction from its implementation so both can change independently.
+- roles: `Abstraction`, `RefinedAbstraction`, `Implementation`, `ConcreteImplementation`.
 
-- Intent: Convert the interface of a class into another interface clients expect. Allows classes with incompatible interfaces to work together.
-- Key Participants: Target, Adapter, Adaptee.
+### command pattern
+- purpose: turn a request into an object so you can queue it, log it, and support undo operations.
+- roles: `Command`, `ConcreteCommand`, `Receiver`, `Invoker`, `Client`.
 
-### Bridge Pattern
+### composite pattern
+- purpose: arrange objects into tree structures to represent whole-part relationships, so you can treat them all uniformly.
+- roles: `Component`, `Leaf`, `Composite`.
 
-- Intent: Decouple an abstraction from its implementation so that the two can vary independently.
-- Key Participants: Abstraction, RefinedAbstraction, Implementation, ConcreteImplementation.
+### decorator pattern
+- purpose: add responsibilities to an object dynamically, as an alternative to subclassing.
+- roles: `Component`, `ConcreteComponent`, `Decorator`, `ConcreteDecorator`.
 
-### Command Pattern
+### facade pattern
+- purpose: simplify interactions with a system by providing a unified interface to its more complex subsystems.
+- roles: `Facade`, `Subsystem` classes.
 
-- Intent: Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
-- Key Participants: Command, ConcreteCommand, Receiver, Invoker, Client.
+### factory method pattern
+- purpose: let subclasses decide which object to create, instead of having the parent class specify the exact class.
+- roles: `Creator`, `ConcreteCreator`, `Product`, `ConcreteProduct`.
 
-### Composite Pattern
+### iterator pattern
+- purpose: provide a way to sequentially access elements of a collection without exposing the underlying structure.
+- roles: `Iterator`, `ConcreteIterator`, `Aggregate`, `ConcreteAggregate`.
 
-- Intent: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
-- Key Participants: Component, Leaf, Composite.
+### memento pattern
+- purpose: capture an object’s internal state without exposing its details, so it can be restored later.
+- roles: `Memento`, `Originator`, `Caretaker`.
 
-### Decorator Pattern
+### null object pattern
+- purpose: use a default object when the real object is missing, to avoid null references.
+- roles: `AbstractObject`, `RealObject`, `NullObject`.
 
-- Intent: Attach additional responsibilities to an object dynamically. Provides a flexible alternative to subclassing for extending functionality.
-- Key Participants: Component, ConcreteComponent, Decorator, ConcreteDecorator.
+### observer pattern
+- purpose: automatically notify and update dependents when an object changes state.
+- roles: `Subject`, `Observer`, `ConcreteSubject`, `ConcreteObserver`.
 
-### Facade Pattern
+### proxy pattern
+- purpose: provide a stand-in for an object, controlling access to it.
+- roles: `Proxy`, `Subject`, `RealSubject`.
 
-- Intent: Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
-- Key Participants: Facade, Subsystem classes.
+### singleton pattern
+- purpose: ensure a class only has one instance, and provide a way to access it globally.
+- roles: `Singleton`.
 
-### Factory Method Pattern
+### state pattern
+- purpose: change an object’s behavior based on its internal state.
+- roles: `Context`, `State`, `ConcreteState`.
 
-- Intent: Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
-- Key Participants: Creator, ConcreteCreator, Product, ConcreteProduct.
+### strategy pattern
+- purpose: define a set of interchangeable algorithms, allowing clients to switch between them.
+- roles: `Strategy`, `Context`, `ConcreteStrategy`.
 
-### Iterator Pattern
+### template method pattern
+- purpose: define the overall structure of an algorithm, while allowing subclasses to fill in specific steps.
+- roles: `AbstractClass`, `ConcreteClass`.
 
-- Intent: Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
-- Key Participants: Iterator, ConcreteIterator, Aggregate, ConcreteAggregate.
-
-### Memento Pattern
-
-- Intent: Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.
-- Key Participants: Memento, Originator, Caretaker.
-
-### Null Object Pattern
-
-- Intent: Provide an object that acts as a surrogate for a null object. The Null Object provides default behavior when the original object is null.
-- Key Participants: AbstractObject, RealObject, NullObject.
-
-### Observer Pattern
-
-- Intent: Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
-- Key Participants: Subject, Observer, ConcreteSubject, ConcreteObserver.
-
-### Proxy Pattern
-
-- Intent: Provide a surrogate or placeholder for another object to control access to it.
-- Key Participants: Proxy, Subject, RealSubject.
-
-### Singleton Pattern
-
-- Intent: Ensure a class only has one instance and provide a global point of access to it.
-- Key Participants: Singleton.
-
-### State Pattern
-
-- Intent: Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
-- Key Participants: Context, State, ConcreteState.
-
-### Strategy Pattern
-
-- Intent: Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
-- Key Participants: Strategy, Context, ConcreteStrategy.
-
-### Template Method Pattern
-
-- Intent: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
-- Key Participants: AbstractClass, ConcreteClass.
